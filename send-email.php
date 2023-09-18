@@ -12,7 +12,7 @@ require "vendor/autoload.php";
 $mail = new PHPMailer(true);
 
 
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
 $mail-> isSMTP();
 $mail-> SMTPAuth = true;
@@ -24,13 +24,16 @@ $mail->Port = 587;
 $mail-> Username = "integralhld@gmail.com";
 $mail-> Password = "dcrzqolctfkphgzw";
 
-$mail->setFrom($email, $name);
-$mail->addAddress("ktmatjila@gmail.com", "Koketso");
+$mail->setFrom($email, $name, $auto);
+$mail->addAddress("integralhld@gmail.com", "Koketso");
 
-$mail->Body = $message;
+$mail->Body ="
+E-Mail: $email
+Name:  $name
+Message: $message";
 
 $mail->send();
 
-echo "email sent";
+header("Location: thankyou.html");
 
 

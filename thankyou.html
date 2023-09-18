@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOL Cafe | LIVE EAT PLAY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css"> <!-- fontawesome -->
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/kol_cafe.css">
+    
+
+</head>
+<body>    
+    
+    <div id="contact" class="parallax-window relative" data-parallax="scroll"  data-image-src="img/header.jpg " alt="image"   >
+        
+        <div class="container mx-auto tm-container pt-24 pb-48 sm:py-48">
+            <div class="flex flex-col lg:flex-row justify-around items-center lg:items-stretch">
+                <div class="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
+                    <h2 class="text-5xl mb-6 tm-text-green" style="text-align: center;">Message Received!!!</h2>
+                    <p class="mb-16 text-2xl leading-8 px-24" >
+                        Thank you for contacting us, we'll get back to you as soon as we can.    
+                    </p>
+                    <p class="mb-10 text-lg">
+                    </p>
+                    <div class="text-center">
+                        <a href="index.html"  class="inline-block text-white text-2xl pl-10 pr-12 px-6 py-6 rounded-lg transition tm-bg-green">
+                            <i ></i>
+                            Go Back</a>
+                        
+                    </div>                    
+                </div>
+               
+            </div>
+                <div> 
+                    <footer class="absolute bottom-0 left-0 w-full">
+                <div class="text-white container mx-auto tm-container p-8 text-lg flex flex-col md:flex-row justify-between">
+                    <span>© 2023 KOL Cafe. All rights reserved.</span>
+                    <span class="mt-5 md:mt-0"> <ul>
+                        <li style="display:inline-block;">
+                            <a href="https://www.facebook.com/kolcaferestaurant" target="_blank"> <img src="img/facebook.png" alt="Image" width="30"/></a>
+                        </li>
+                        <li style="display:inline-block;">
+                            <a href="https://www.instagram.com/kolcafe" target="_blank"> <img src="img/insta.png" alt="Image" width="33" height="3" /></a>
+                        </li>
+                        <li style="display:inline-block;">
+                            <a href="https://twitter.com/kolcafe_ndofaya" target="_blank"> <img src="img/twitter.png" alt="Image" width="30"/></a>
+                        </li>
+                    </ul></span> 
+                   
+                </div>                
+                    </footer>
+                </div>        
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script>
+
+        function checkAndShowHideMenu() {
+            if(window.innerWidth < 768) {
+                $('#tm-nav ul').addClass('hidden');                
+            } else {
+                $('#tm-nav ul').removeClass('hidden');
+            }
+        }
+
+        $(function(){
+            var tmNav = $('#tm-nav');
+            tmNav.singlePageNav();
+
+            checkAndShowHideMenu();
+            window.addEventListener('resize', checkAndShowHideMenu);
+
+            $('#menu-toggle').click(function(){
+                $('#tm-nav ul').toggleClass('hidden');
+            });
+
+            $('#tm-nav ul li').click(function(){
+                if(window.innerWidth < 768) {
+                    $('#tm-nav ul').addClass('hidden');
+                }                
+            });
+
+            $(document).scroll(function() {
+                var distanceFromTop = $(document).scrollTop();
+
+                if(distanceFromTop > 100) {
+                    tmNav.addClass('scroll');
+                } else {
+                    tmNav.removeClass('scroll');
+                }
+            });
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+     
+</body>
+</html>
