@@ -16,24 +16,23 @@
 </head>
 <body>    
     <!-- Intro -->
-    <div id="intro" class="parallax-window" data-parallax="scroll" 
+    <div id="home" class="parallax-window" data-parallax="scroll" 
     data-image-src="img/header2.jpg"
     >
-         
+         <!--menu items  -->
         <nav id="tm-nav" class="fixed w-full">
             <div class="tm-container mx-auto px-2 md:py-6 text-right">
                 <button class="md:hidden py-2 px-2" id="menu-toggle"><i class="fas fa-2x fa-bars tm-text-gold"></i></button>
                 <ul class="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
-                    <li class="inline-block mb-4 mx-4"><a href="#intro" class="tm-text-gold py-1 md:py-3 px-4">Home</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#home" class="tm-text-gold py-1 md:py-3 px-4">Home</a></li>
+                    <li class="inline-block mb-4 mx-4"><a href="#gig" class="tm-text-gold py-1 md:py-3 px-4">Gig Guide</a></li>
                     <li class="inline-block mb-4 mx-4"><a href="#menu" class="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
                     <li class="inline-block mb-4 mx-4"><a href="#about" class="tm-text-gold py-1 md:py-3 px-4">About</a></li>
                     <li class="inline-block mb-4 mx-4"><a href="#contact" class="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
                 </ul>
             </div>            
         </nav>
-        <!-- <video autoplay loop>
-            <source src="vid/kol_vid.mp4" type="video/mp4">
-        </video> -->
+        
         <div class="container mx-auto px-2 tm-intro-width">
             <div class="sm:pb-60 sm:pt-48 py-20">
                 <div class="bg-black bg-opacity-70 p-12 mb-5 text-center">
@@ -49,30 +48,60 @@
             </div>
         </div>        
     </div>
+ 
 
     <!-- 
-        Cafe Menu 
+        Gig Guide 
+    -->
+        <div id="gig" class="parallax-window"  data-parallax="scroll" >
+
+             <video autoplay muted loop  >
+            <source src="vid/vid_2.mp4" type="video/mp4" >
+             </video>
+      
+            <div class="container mx-auto tm-container py-24 sm:py-48">
+              <div class="text-center mb-16" >
+                <h2 id="gig-title" class="bg-opacity-40 bg-black tm-text-brown py-4 px-8 text-4xl font-medium inline-block rounded-md">Gig Guide</h2>
+            </div>   
+   
+                <swiper-container  class="mySwiper" navigation="true" >
+                <swiper-slide><a href="img/gig guide/gig_1.jpg"><img src="img/gig guide/gig_1.jpg" alt="Image" ></a></swiper-slide>
+                <swiper-slide><a href="img/gig guide/gig_2.jpg"><img src="img/gig guide/gig_2.jpg" alt="Image" ></a></swiper-slide>
+                <swiper-slide><a href="img/gig guide/gig_3.jpg"><img src="img/gig guide/gig_3.jpg" alt="Image" ></a></swiper-slide>
+                <swiper-slide><a href="img/gig guide/gig_4.jpg"><img src="img/gig guide/gig_4.jpg" alt="Image" ></a></swiper-slide>
+                <swiper-slide><a href="img/gig guide/gig_5.jpg"><img src="img/gig guide/gig_5.jpg" alt="Image" ></a></swiper-slide>
+                <swiper-slide><a href="img/gig guide/gig_6.jpg"><img src="img/gig guide/gig_6.jpg" alt="Image" ></a></swiper-slide>
+                
+                </swiper-container>
+  
+                <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  
+                   
+        </div> 
+
+       <!-- 
+        Kol Menu 
     -->
     <div id="menu" class="parallax-window" data-parallax="scroll" data-image-src="img/food_5.jpg">
-       <!-- <div class="container mx-auto tm-container py-24 sm:py-48"> -->
-              <div class="text-center mb-16" >
-                <h2 id="menu-title" class="bg-opacity-80 bg-black tm-text-brown py-4 px-8 text-4xl font-medium inline-block rounded-md">Our Menu</h2>
-            </div>   
+               <div class="text-center mb-16" >
+                 <h2 id="menu-title" class="bg-opacity-80 bg-black tm-text-brown py-4 px-8 text-4xl font-medium inline-block rounded-md">Our Menu</h2>
+             </div>   
+ 
+           
+ 
+     <swiper-container  class="mySwiper" navigation="true">
+        <swiper-slide><a href="img/menu-servises/menu_pg_1.jpg"><img src="img/menu-servises/menu_pg_1.jpg" alt="Image" ></a></swiper-slide>
+        <swiper-slide><a href="img/menu-servises/menu_pg_2.jpg"><img src="img/menu-servises/menu_pg_2.jpg" alt="Image" ></a></swiper-slide>
+        <swiper-slide><a href="img/menu-servises/drinks_menu_pg_1.jpg"><img src="img/menu-servises/drinks_menu_pg_1.jpg" alt="Image" ></a></swiper-slide>
+        <swiper-slide><a href="img/menu-servises/drinks_menu_pg_2.jpg"><img src="img/menu-servises/drinks_menu_pg_2.jpg" alt="Image" ></a></swiper-slide>
+      
+     </swiper-container>
+   
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+   
+       
+     </div> 
 
-          
-<body>
-    <swiper-container  class="mySwiper" navigation="true">
-      <swiper-slide><img src="img/menu-servises/menu_pg_1.jpg" alt="Image"></swiper-slide>
-      <swiper-slide><img src="img/menu-servises/menu_pg_2.jpg" alt="Image"></swiper-slide>
-      <swiper-slide><img src="img/menu-servises/drinks_menu_pg_1.jpg" alt="Image"></swiper-slide>
-      <swiper-slide><img src="img/menu-servises/drinks_menu_pg_2.jpg" alt="Image"></swiper-slide>
-     
-    </swiper-container>
-  
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
-  
-  </body>     
-    </div> 
     <!-- 
         About us section 
     -->
@@ -195,5 +224,6 @@
             });
         });
     </script>
+     </div> 
 </body>
 </html>
